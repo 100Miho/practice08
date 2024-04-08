@@ -1,5 +1,6 @@
 package com.javaex.ex04;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SumApp {
@@ -12,11 +13,13 @@ public class SumApp {
 		String numLine = sc.nextLine();
 
 		//코드를 작성하세요
-		char[] numArr = new char[numLine.length()];
+		String[] nums = numLine.split(" ");
+		int[] numArr = new int[nums.length];
 		
-		
-		System.out.println(numArr);
-		
+		for(int i=0; i<nums.length; i++) {
+			numArr[i] = Integer.parseInt(nums[i]);
+			sum += numArr[i];
+		}
 		
 		System.out.println("합:" + sum);
 		
